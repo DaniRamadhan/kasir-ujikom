@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pay For Everything</title>
+    <link rel="shortcut icon" href="src/favicon.png" type="image/x-icon">
+  </head>
+<body>
+  <div class="alert alert-primary" role="alert">
+    <h3>AiryPay Indonesia</h3>
+  </div>
+      <div id="history-content"></div>
+      <div class="row bg-light" style="margin : 2em; padding : 2em">
+      <div class="col-9">
+        <a href="#page" id="transaction-history"><button type="button" class="btn btn-success" style="margin: 10px 0 10px 0;" >
+          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-clock-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+          </svg>  Transaction History</button></a>
+        <table class="table rounded border">
+          <thead class="thead-dark">
+            <tr>
+              <th>Name Item</th>
+              <th>Total Item</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><input required id="nameItem" type="text" class="form-control" placeholder="Example : Rengginang"  aria-describedby="basic-addon1"  required></td>
+              <td><input required id="totalItem" type="number" class="form-control" placeholder="Example : 1" aria-describedby="basic-addon1"  required></td>
+              <td><input required id="price" type="number" class="form-control" placeholder="Example : 5000" aria-label="Username" aria-describedby="basic-addon1"  required></td>
+            </tr>
+          </tbody>
+        </table>
+        <button type="button" class="btn btn-danger" id="finish-order">Finish Order</button>
+        <button style="float: right;" class="btn btn-primary" id="add"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+        </svg>  Add</button>
+        <div class="alert alert-danger" style="display: none; margin: 1em;" role="alert">
+          Data Yang Anda Masukkan Tidak Valid
+        </div>
+      </div>
+        
+        <div>
+          <div class="card" style=" max-width: 18rem;">
+            
+            <div class="card-body">
+              <h5 class="card-title text-center">AiryPay Indonesia</h5>
+              <p class="card-text">-------------------------------------</div>
+                <table class="table" id="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Item</th>
+                      <th scope="col">Price</th>
+                      <th scope="col">Lots</th>
+                      <th scope="col">Total</th>
+                    </tr>
+                  </thead>
+                  <tbody class="table-body">
+                   <!-- foreach item -->
+                  </tbody>
+                </table>
+            <div class="card-body">
+              <table class="table text-right">
+                <tbody>
+                  <tr>
+                    <td>TOTAL : </td>
+                    <td><p id="total-pricing"></p></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+</html>
